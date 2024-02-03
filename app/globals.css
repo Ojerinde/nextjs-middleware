@@ -131,3 +131,15 @@ html {
   margin-top: 1rem;
   font-size: 2rem;
 }
+
+.logout__button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background-color: rgb(102, 131, 159);
+  border: 0.2rem solid rgb(236, 239, 241);
+  color: beige;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-radius: 1rem;
+}
