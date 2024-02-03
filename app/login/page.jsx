@@ -35,19 +35,6 @@ const Login = () => {
         const data = await response.json();
         console.log("Login successful:", data);
 
-        // Logic to set cookie
-        // Create a new Date object
-        const date = new Date();
-
-        // Calculate the expiration time in milliseconds
-        date.setTime(date.getTime() + 60 * 60 * 1000);
-
-        // Convert the date to UTC format and construct the 'expires' string
-        const expires = "expires=" + date.toUTCString();
-
-        document.cookie =
-          "accessToken" + "=" + data.token + ";" + expires + ";path=/;HttpOnly";
-
         // Redirecting
         router.push("/dashboard");
       } else {
