@@ -1,33 +1,133 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.main__container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 7rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.main__container h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.2rem;
+  color: rgb(144, 189, 231);
+  text-align: center;
+}
+
+.main__container div {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.main__container a {
+  border: 2px solid rgb(64, 119, 139);
+  border-radius: 1rem;
+  padding: 2rem 4rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: rgb(64, 119, 139);
+}
+
+.main__container a:hover {
+  border: 2px solid rgb(140, 198, 219);
+  color: rgb(140, 198, 219);
+}
+
+.form__container {
+  width: 30%;
+  margin: 6rem auto;
+  border: 0.3rem solid rgb(140, 198, 219);
+  padding: 2rem 4rem;
+}
+
+.form__container h2 {
+  font-size: 4rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.2rem;
+  color: rgb(144, 189, 231);
+  text-align: center;
+}
+.form__container a {
+  border-radius: 1rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: rgb(64, 119, 139);
+}
+
+.form__container a:hover {
+  color: rgb(140, 198, 219);
+}
+
+.form {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.form div {
+  margin-bottom: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.form div label {
+  font-size: 1.7rem;
+  color: rgb(102, 131, 159);
+}
+
+.form div input {
+  font-size: 1.2rem;
+  font-weight: 500;
+  outline: none;
+  padding: 0.6rem 1rem;
+  color: rgb(102, 131, 159);
+}
+.form div input:focus {
+  border: 0.2rem solid rgb(236, 239, 241);
+}
+
+.form button {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background-color: rgb(102, 131, 159);
+  border: 0.2rem solid rgb(236, 239, 241);
+  color: beige;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-radius: 1rem;
+}
+
+.card__container {
+  width: 45%;
+  margin: 7rem auto;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.card h2 {
+  font-size: 3rem;
+}
+.card p {
+  margin-top: 1rem;
+  font-size: 2rem;
 }
